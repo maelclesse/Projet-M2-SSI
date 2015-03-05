@@ -11,11 +11,15 @@ while true; do
 	read -p "Saisir le fichier dans lequel stocker les resultats " fichier
 	read -p "Saisir l'expression a rechercher " exp
 	#on créé une en-tête pour le fichier où seront stockés les résultats
-	echo "Analyse de fichiers" >> $fichier
-	echo "Créé par Mael Clesse" >> $fichier
+	echo " ------------------------" >> $fichier
+	echo "| Analyseur de fichiers  |" >> $fichier
+	echo "| Créé par Mael Clesse   |" >> $fichier
+	echo " ------------------------" >> $fichier
+	echo " " >> $fichier
 	#on recherche l'expression dans tous les fichiers du path et on écrit les résultats dans le 
 	#fichier de destination
 	zmore $path | grep $exp >> $fichier
+	echo " " >> $fichier
 	echo "Nombre d'occurrences de "$exp" dans le(s) fichier(s) : " >> $fichier
 	grep -o $exp $fichier | wc -l >> $fichier
 	echo "Vous pouvez consulter les resultats de la recherche dans le fichier "$fichier
