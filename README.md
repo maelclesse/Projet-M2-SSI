@@ -1,2 +1,3 @@
 Projet-M2-SSI
 Ce projet a pour but de produire un script d'analyse de données afin de déterminer quels types de données sensibles peuvent être trouvés sur le site Pastebin.
+A l'aide du script produit, des recherches sur des mots-clés définis vont être menées, afin de déterminer si du contenu qui n'aurait pas dû figurer sur Pastebin s'y est tout de même retrouvé par erreur, ou non ...
